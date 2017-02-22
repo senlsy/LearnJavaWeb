@@ -28,6 +28,16 @@ public class ReplaceTextStream extends ServletOutputStream {
     baStream.write(bs);
   }
 
+  @Override
+  public boolean isReady() {
+    return false;
+  }
+
+  @Override
+  public void setWriteListener(WriteListener writeListener) {
+
+  }
+
   public void close() throws java.io.IOException {
     if (!closed) {
        processStream();
