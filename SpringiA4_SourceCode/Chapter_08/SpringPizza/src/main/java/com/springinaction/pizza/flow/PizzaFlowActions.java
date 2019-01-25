@@ -18,6 +18,7 @@ import com.springinaction.pizza.service.CustomerService;
 
 @Component
 public class PizzaFlowActions {
+
     private static final Logger LOGGER = getLogger(PizzaFlowActions.class);
 
     public Customer lookupCustomer(String phoneNumber)

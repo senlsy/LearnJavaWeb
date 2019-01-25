@@ -20,6 +20,7 @@ public class SpittleControllerTest {
 
   @Test
   public void houldShowRecentSpittles() throws Exception {
+
     List<Spittle> expectedSpittles = createSpittleList(20);
     SpittleRepository mockRepository = mock(SpittleRepository.class);
     when(mockRepository.findSpittles(Long.MAX_VALUE, 20))

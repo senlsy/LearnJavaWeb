@@ -5,21 +5,21 @@ import javax.servlet.http.*;
 import java.io.*;
 
 public class HelloServlet extends HttpServlet {
-  /** ÏìÓ¦¿Í»§ÇëÇó*/
+  /** å“åº”å®¢æˆ·è¯·æ±‚*/
   public void doGet(HttpServletRequest request,HttpServletResponse response)
     throws ServletException, IOException {
 
-    //»ñµÃusernameÇëÇó²ÎÊı 
+    //è·å¾—usernameè¯·æ±‚å‚æ•° 
     String username=request.getParameter("username");
   
-    /*Êä³öHTMLÎÄµµ*/
+    /*è¾“å‡ºHTMLæ–‡æ¡£*/
     PrintWriter out = response.getWriter();
     out.println("<html><head><title>helloApp</TITLE></head>");
     out.println("<body>");
     out.println("<b>Hello,"+username+"</b>");
     out.println("</body></html>");
      
-    out.close(); //¹Ø±ÕPrintWriter
+    out.close(); //å…³é—­PrintWriter
 
   }
 }
@@ -28,7 +28,7 @@ public class HelloServlet extends HttpServlet {
 
 
 /****************************************************
- * ×÷Õß£ºËïÎÀÇÙ                                     *
- * À´Ô´£º<<TomcatÓëJava Web¿ª·¢¼¼ÊõÏê½â>>           *
- * ¼¼ÊõÖ§³ÖÍøÖ·£ºwww.javathinker.org                *
+ * ä½œè€…ï¼šå­™å«ç´                                     *
+ * æ¥æºï¼š<<Tomcatä¸Java Webå¼€å‘æŠ€æœ¯è¯¦è§£>>           *
+ * æŠ€æœ¯æ”¯æŒç½‘å€ï¼šwww.javathinker.org                *
  ***************************************************/

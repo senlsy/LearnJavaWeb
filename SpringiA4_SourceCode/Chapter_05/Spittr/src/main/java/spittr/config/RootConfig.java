@@ -14,8 +14,7 @@ import spittr.config.RootConfig.WebPackage;
 @Configuration
 @Import(DataConfig.class)
 @ComponentScan(basePackages = {"spittr"},
-        excludeFilters = {
-                @Filter(type = FilterType.CUSTOM, value = WebPackage.class)
+        excludeFilters = {@Filter(type = FilterType.CUSTOM, value = WebPackage.class)
         })
 public class RootConfig {
 
