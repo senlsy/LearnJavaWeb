@@ -13,7 +13,7 @@ public class CDPlayer implements MediaPlayer {
         this.cd = cd;
     }
 
-    public void play() {
+    public void startPlay() {
         cd.play();
     }
 

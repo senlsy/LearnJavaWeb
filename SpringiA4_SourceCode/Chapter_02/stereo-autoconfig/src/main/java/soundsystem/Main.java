@@ -1,6 +1,5 @@
 package soundsystem;
 
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -8,9 +7,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class Main {
     public static void main(String[] args) {
-//        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
+        //装载config
+        //AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(CDPlayerConfig.class);
+
+        //装载xml
         ClassPathXmlApplicationContext xmlContext = new ClassPathXmlApplicationContext("META-INF/spring/soundsystem.xml");
+
         MediaPlayer player = xmlContext.getBean(MediaPlayer.class);
-        player.play();
+        player.startPlay();
     }
 }
