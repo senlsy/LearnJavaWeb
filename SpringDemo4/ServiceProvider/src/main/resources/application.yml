@@ -1,0 +1,10 @@
+server:
+  port: 8001  # 端口号
+
+spring:
+  application:
+    name: alibaba-service-provider   # 服务名
+  cloud:
+    nacos:
+      discovery:
+      server-adder: 127.0.0.1:8848  # Nacos server 的地址

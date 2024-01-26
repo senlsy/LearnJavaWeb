@@ -1,0 +1,14 @@
+server:
+  port: 6001 # 端口号
+spring:
+  application:
+    name: alibaba-config-client # 服务名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848 # Nacos 服务注册中心地址
+      config:
+        server-addr: ${spring.cloud.nacos.discovery.server-addr} # Nacos 作为配置中心地址
+        file-extension: yaml        # 指定 yaml 格式的配置
+  profiles:
+    active: dev # 激活 dev 的配置
